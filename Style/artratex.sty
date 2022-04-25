@@ -531,7 +531,7 @@
     \ifartx@alpha% enable alpha citation style
         \RequirePackage[backend=biber,style=\artxbiberalp]{biblatex}%
     \fi
-    \addbibresource{\artxbibref}%
+    \addbibresource[location=local]{../main.bib}%artxbibref
     \providecommand{\citep}[1]{\parencite{#1}}% compatibility
     \providecommand{\citet}[1]{\textcite{#1}}% compatibility
     \providecommand{\bibetal}{et al.}% compatibility
