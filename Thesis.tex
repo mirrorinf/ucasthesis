@@ -21,7 +21,7 @@
 %---------------------------------------------------------------------------%
 %->> Document settings
 %---------------------------------------------------------------------------%
-\usepackage[authoryear,list]{Style/artratex}% document settings
+\usepackage[biber,numbers,list]{Style/artratex}% document settings
 %- usage: \usepackage[option1,option2,...,optionN]{artratex}
 %- Multiple optional arguments:
 %- [bibtex|biber]% set bibliography processor and package
@@ -52,6 +52,10 @@
 %-> Titlepage information
 %-
 \input{Tex/Frontinfo}%
+
+\usepackage{import}
+\import{../}{package}
+
 \begin{document}
 %-
 %-> Frontmatter: title page, abstract, content list, symbol list, preface
@@ -67,12 +71,12 @@
 \intobmk*{\cleardoublepage}{\listtablename}% add link to bookmark
 \listoftables% table catalog
 }
-\input{Tex/Prematter}% symbol list, preface content
+%TODO \input{Tex/Prematter}% symbol list, preface content
 %-
 %-> Mainmatter
 %-
 \mainmatter% initialize the environment
-\input{Tex/Mainmatter}% main content
+\import{../}{lib}
 %-
 %-> Appendix
 %-
