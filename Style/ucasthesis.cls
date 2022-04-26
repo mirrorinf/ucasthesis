@@ -157,7 +157,7 @@
 }
 \newcommand{\ulhshift}{-4em}% horizontal shift on underline
 \newcommand{\ulextend}[2][350pt]{% extend underline length
-    \hbox to #1{\hfill\hspace*{\ulhshift}#2\hfill}}
+    {\hbox to #1{\hfill #2\hfill}}}
 %---------------------------------------------------------------------------%
 %->> Titlepage
 %---------------------------------------------------------------------------%
