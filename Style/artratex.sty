@@ -269,30 +269,30 @@
 %-
 %-> Math packages
 %-
-\RequirePackage{amsmath,amsthm,amssymb}% math structures, theorems, and extended symbols
-\theoremstyle{plain}% for theorems, lemmas, propositions, etc
-\providecommand{\theoremname}{Theorem}%
-\newtheorem{theorem}{\theoremname}[\artxmaincnt]
-\providecommand{\axiomname}{Axiom}%
-\newtheorem{axiom}[theorem]{\axiomname}
-\providecommand{\lemmaname}{Lemma}%
-\newtheorem{lemma}[theorem]{\lemmaname}
-\providecommand{\corollaryname}{Corollary}%
-\newtheorem{corollary}[theorem]{\corollaryname}
-\providecommand{\assertionname}{Assertion}%
-\newtheorem{assertion}[theorem]{\assertionname}
-\providecommand{\propositionname}{Proposition}%
-\newtheorem{proposition}[theorem]{\propositionname}
-\providecommand{\conjecturename}{Conjecture}%
-\newtheorem{conjecture}[theorem]{\conjecturename}
-\theoremstyle{definition}% for definitions and examples
-\providecommand{\definitionname}{Definition}%
-\newtheorem{definition}{\definitionname}[\artxmaincnt]
-\providecommand{\examplename}{Example}%
-\newtheorem{example}{\examplename}[\artxmaincnt]
-\theoremstyle{remark}% for remarks and notes
-\providecommand{\remarkname}{Remark}%
-\newtheorem*{remark}{\remarkname}
+%\RequirePackage{amsmath,amsthm,amssymb}% math structures, theorems, and extended symbols
+%\theoremstyle{plain}% for theorems, lemmas, propositions, etc
+%\providecommand{\theoremname}{Theorem}%
+%\newtheorem{theorem}{\theoremname}[\artxmaincnt]
+%\providecommand{\axiomname}{Axiom}%
+%\newtheorem{axiom}[theorem]{\axiomname}
+%\providecommand{\lemmaname}{Lemma}%
+%\newtheorem{lemma}[theorem]{\lemmaname}
+%\providecommand{\corollaryname}{Corollary}%
+%\newtheorem{corollary}[theorem]{\corollaryname}
+%\providecommand{\assertionname}{Assertion}%
+%\newtheorem{assertion}[theorem]{\assertionname}
+%\providecommand{\propositionname}{Proposition}%
+%\newtheorem{proposition}[theorem]{\propositionname}
+%\providecommand{\conjecturename}{Conjecture}%
+%\newtheorem{conjecture}[theorem]{\conjecturename}
+%\theoremstyle{definition}% for definitions and examples
+%\providecommand{\definitionname}{Definition}%
+%\newtheorem{definition}{\definitionname}[\artxmaincnt]
+%\providecommand{\examplename}{Example}%
+%\newtheorem{example}{\examplename}[\artxmaincnt]
+%\theoremstyle{remark}% for remarks and notes
+%\providecommand{\remarkname}{Remark}%
+%\newtheorem*{remark}{\remarkname}
 
 \ifartx@math% extra math packages
     \RequirePackage{mathtools}% extension to amsmath
@@ -346,81 +346,81 @@
     %\RequirePackage[cmintegrals]{newtxmath}% times font, load after amsmath and newtxtext packages
     %\RequirePackage{mathrsfs}% enable \mathscr for script alphabet
     %\RequirePackage[cal=cm]{mathalfa}% map styles for calligraphic \mathcal and script \mathscr alphabet
-    \IfFontExistsTF{XITS-Regular.otf}{%
-    \RequirePackage{unicode-math}% unicode font configuration <XITS|STIX2>
-    \def\boldsymbol#1{\symbfit{#1}}% treat obsoleteness
-    \providecommand{\Vector}[1]{\symbfit{#1}}% general vectors in bold italic
-    \providecommand{\unitVector}[1]{\symbfup{#1}}% unit vectors in bold roman
-    \providecommand{\Matrix}[1]{\symbfup{#1}}% matrix in bold roman
-    \providecommand{\unitMatrix}[1]{\symbfup{#1}}% identity matrix in bold roman
-    \providecommand{\Tensor}[1]{\symbfsfup{#1}}% tensor in sans-serif bold italic
-    \providecommand{\unitTensor}[1]{\symbfsfup{#1}}% identity tensor in sans-serif bold
-    \setmainfont[NFSSFamily=entextrm]{XITS}[
-      Extension      = .otf,
-      UprightFont    = *-Regular,
-      BoldFont       = *-Bold,
-      ItalicFont     = *-Italic,
-      BoldItalicFont = *-BoldItalic,
-      Ligatures=TeX,
-    ]
-    \setsansfont[NFSSFamily=entextsf]{XITS}[
-      Extension      = .otf,
-      UprightFont    = *-Regular,
-      BoldFont       = *-Bold,
-      ItalicFont     = *-Italic,
-      BoldItalicFont = *-BoldItalic,
-      Ligatures=TeX,
-    ]
-    \setmonofont[NFSSFamily=entexttt]{XITS}[
-      Extension      = .otf,
-      UprightFont    = *-Regular,
-      BoldFont       = *-Bold,
-      ItalicFont     = *-Italic,
-      BoldItalicFont = *-BoldItalic,
-      Ligatures=TeX,
-    ]
-    \setmathfont{XITSMath-Regular}[
-      Extension    = .otf,
-      BoldFont     = XITSMath-Bold,
-      Ligatures=TeX,
-      StylisticSet = 1,
-    ]
-    \setmathfont{XITSMath-Regular}[
-      Extension    = .otf,
-      range={cal,bfcal},
-      Ligatures=TeX,
-      StylisticSet = 1,
-    ]
-    \setmathfont{XITSMath-Regular}[
-      Extension    = .otf,
-      range={scr,bfscr},
-      Ligatures=TeX,
-      StylisticSet = 2,
-    ]
-    \setmathrm{XITSMath-Regular}[
-      Extension    = .otf,
-      BoldFont     = XITSMath-Bold,
-      Ligatures=TeX,
-      StylisticSet = 1,
-    ]
-    \setmathsf{XITSMath-Regular}[
-      Extension    = .otf,
-      BoldFont     = XITSMath-Bold,
-      Ligatures=TeX,
-      StylisticSet = 1,
-    ]
-    \setmathtt{XITSMath-Regular}[
-      Extension    = .otf,
-      BoldFont     = XITSMath-Bold,
-      Ligatures=TeX,
-      StylisticSet = 1,
-    ]
-    }{%
-    \RequirePackage{newtxtext}% main font
-    \RequirePackage[cmintegrals]{newtxmath}% times font, load after amsmath and newtxtext packages
-    \RequirePackage{mathrsfs}% enable \mathscr for script alphabet
-    \RequirePackage[cal=cm]{mathalfa}% map styles for calligraphic \mathcal and script \mathscr alphabet
-    }
+    %\IfFontExistsTF{XITS-Regular.otf}{%
+    %\RequirePackage{unicode-math}% unicode font configuration <XITS|STIX2>
+    %\def\boldsymbol#1{\symbfit{#1}}% treat obsoleteness
+    %\providecommand{\Vector}[1]{\symbfit{#1}}% general vectors in bold italic
+    %\providecommand{\unitVector}[1]{\symbfup{#1}}% unit vectors in bold roman
+    %\providecommand{\Matrix}[1]{\symbfup{#1}}% matrix in bold roman
+    %\providecommand{\unitMatrix}[1]{\symbfup{#1}}% identity matrix in bold roman
+    %\providecommand{\Tensor}[1]{\symbfsfup{#1}}% tensor in sans-serif bold italic
+    %\providecommand{\unitTensor}[1]{\symbfsfup{#1}}% identity tensor in sans-serif bold
+    %\setmainfont[NFSSFamily=entextrm]{XITS}[
+    %  Extension      = .otf,
+    %  UprightFont    = *-Regular,
+    %  BoldFont       = *-Bold,
+    %  ItalicFont     = *-Italic,
+    %  BoldItalicFont = *-BoldItalic,
+    %  Ligatures=TeX,
+    %]
+    %\setsansfont[NFSSFamily=entextsf]{XITS}[
+    %  Extension      = .otf,
+    %  UprightFont    = *-Regular,
+    %  BoldFont       = *-Bold,
+    %  ItalicFont     = *-Italic,
+    %  BoldItalicFont = *-BoldItalic,
+    %  Ligatures=TeX,
+    %]
+    %\setmonofont[NFSSFamily=entexttt]{XITS}[
+    %Extension      = .otf,
+    %  UprightFont    = *-Regular,
+    %  BoldFont       = *-Bold,
+    %  ItalicFont     = *-Italic,
+    %  BoldItalicFont = *-BoldItalic,
+    %  Ligatures=TeX,
+    %]
+    %\setmathfont{XITSMath-Regular}[
+    %  Extension    = .otf,
+    %  BoldFont     = XITSMath-Bold,
+    %  Ligatures=TeX,
+    %  StylisticSet = 1,
+    %]
+    %\setmathfont{XITSMath-Regular}[
+    %  Extension    = .otf,
+    %  range={cal,bfcal},
+    %  Ligatures=TeX,
+    %  StylisticSet = 1,
+    %]
+    %\setmathfont{XITSMath-Regular}[
+    %  Extension    = .otf,
+    %  range={scr,bfscr},
+    %  Ligatures=TeX,
+    %  StylisticSet = 2,
+    %]
+    %\setmathrm{XITSMath-Regular}[
+    %  Extension    = .otf,
+    %  BoldFont     = XITSMath-Bold,
+    %  Ligatures=TeX,
+    %  StylisticSet = 1,
+    %]
+    %\setmathsf{XITSMath-Regular}[
+    %  Extension    = .otf,
+    %  BoldFont     = XITSMath-Bold,
+    %  Ligatures=TeX,
+    %  StylisticSet = 1,
+    %]
+    %\setmathtt{XITSMath-Regular}[
+    %  Extension    = .otf,
+    %  BoldFont     = XITSMath-Bold,
+    %  Ligatures=TeX,
+    %  StylisticSet = 1,
+    %]
+    %}{%
+    %\RequirePackage{newtxtext}% main font
+    %\RequirePackage[cmintegrals]{newtxmath}% times font, load after amsmath and newtxtext packages
+    %\RequirePackage{mathrsfs}% enable \mathscr for script alphabet
+    %\RequirePackage[cal=cm]{mathalfa}% map styles for calligraphic \mathcal and script \mathscr alphabet
+    %}
     %- Text font: Chinese
     \ifartx@windows%
         \setCJKmainfont{SimSun}[AutoFakeBold=2.5,ItalicFont=KaiTi]%
